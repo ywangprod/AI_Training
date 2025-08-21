@@ -1,6 +1,0 @@
-rules:
-  - id: python.lang.correctness.useless-expression
-    patterns:
-      - pattern: '1 == 1'
-    message: "This expression does nothing."
-    severity: WARNING
