@@ -1,0 +1,9 @@
+repos:
+  -   repo: local
+      hooks:
+        -   id: security-review
+            name: Security Code Review
+            entry: python .pre-commit/security_review.py
+            language: system
+            files: \.(py|js|java|go|rb|ts)$
+            pass_filenames: true

@@ -1,0 +1,24 @@
+{
+  "model": "gpt-3.5-turbo",
+  "max_tokens": 1200,
+  "temperature": 0.1,
+  "file_types": [
+    ".py", ".js", ".jsx", ".ts", ".tsx", ".java",
+    ".go", ".rb", ".php", ".cpp", ".h", ".cs",
+    ".html", ".xml", ".json", ".yaml", ".yml"
+  ],
+  "ignore_dirs": [
+    "node_modules", ".git", "venv", "__pycache__",
+    "dist", "build", ".env", "vendor"
+  ],
+  "security_categories": [
+    "Input Validation",
+    "Injection Vulnerabilities",
+    "Authentication & Authorization",
+    "Sensitive Data Exposure",
+    "Cryptographic Weaknesses",
+    "Insecure Dependencies",
+    "Security Misconfiguration",
+    "Business Logic Flaws"
+  ]
+}

@@ -1,0 +1,21 @@
+# .github/workflows/semgrep-llm.yml
+name: Semgrep with LLM Analysis
+on: [push, pull_request]
+
+jobs:
+  semgrep-llm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Semgrep
+        uses: returntocorp/semgrep-action@v1
+        with:
+          config: p/security-audit
+
+      - name: Analyze results with LLM
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          pip install openai
+          python .github/scripts/analyze_semgrep.py
